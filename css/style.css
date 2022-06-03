@@ -1,0 +1,94 @@
+/*
+   This file contains styles navicon animation.
+*/
+
+
+/** LAYOUT CONTAINERS AND THEIR RELATED ELEMENTS **/
+.centerLayout {
+    width: 40px; /* limit the width of effective area when clicking */
+}
+
+
+/***************** HAMBURGER STYLES  ********************/
+.menuTrigger {
+    display: inline-block;
+    width: 100%;
+    height: 32px;
+    position: relative;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+
+/****** Navicon's property(width and height) ******/
+.mainLine {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 32px;
+    height: 1.5px;
+    margin-top: -3px;
+    background: rgb(251, 251, 253);
+    transition: all linear 0.3s;
+    border-radius: 6px;
+}
+
+.mainLine:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 32px;
+    height: 1.5px;
+    background: rgb(251, 251, 253);
+    transition: all linear 0.3s;
+    border-radius: 6px;
+}
+
+.mainLine:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 32px;
+    height: 1.5px;
+    background: rgb(251, 251, 253);
+    transition: all linear 0.3s;
+    border-radius: 6px;
+}
+
+/****** Set Original Position ******/
+.mainLine:before {
+    top: -13px;
+}
+
+.mainLine:after {
+    top: 13px;
+}
+
+/****** Hover Effects ******/
+#hamburger-one:hover .mainLine:before {
+    top: -16px;
+}
+
+#hamburger-one:hover .mainLine:after {
+    top: 16px;
+}
+
+/******  Click Effects Operated by Javascript Code ******/
+#hamburger-one.menuToggle .mainLine {
+    /* select tag with id: 'hamburger-one' AND class: "menuToggle" */
+    background: transparent;
+}
+
+#hamburger-one.menuToggle .mainLine:before {
+    visibility: visible;
+    top: 0 !important;
+    transform: rotate(45deg);
+}
+
+#hamburger-one.menuToggle .mainLine:after {
+    visibility: visible;
+    top: 0 !important;
+    transform: rotate(-45deg);
+}

@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+/* ================
+   Base Flex Styles
+   ================
+*/
+body {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow:row wrap;
+   flex-flow: row wrap;
+}
+
+aside#side {
+   flex: 1 3 50%;
+   display: flex;
+}
+
+section#main {
+   flex: 1 1 50%;
+   display: flex;
+   -webkit-flex-flow:row wrap;
+   flex-flow: row wrap;
+}
+
+div.work-exp {
+   display: -webkit-flex;
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+}
+
+nav.horizontal ul {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: row nowrap;
+   flex-flow: row nowrap;
+   justify-content: flex-end;
+}
+
+
+

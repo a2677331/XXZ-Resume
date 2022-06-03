@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+/*
+   This file contains styles used to control 
+   a navicon menu.
+*/
+
+/* ===========
+   Base Styles
+   ===========
+*/
+a#navicon {
+  display: none;
+  text-align: left;
+  padding: 6px;
+  width: 52px;
+  height: 44px;
+}
+
+#mobile-name-title {
+  display: none;
+}
+
+/* ===============================
+   Mobile Devices:  <= 1398px 
+   ===============================
+*/
+@media only screen and (max-width: 1398px) {
+  h2.ocupation {
+    display: none;
+  }
+}
+
+/* ===============================
+   Mobile Devices: <= 1057px 
+   ===============================
+*/
+@media only screen and (max-width: 600px) {
+  body {
+    min-width: 318px;
+  }
+
+  header {
+    display: block;
+    position: relative;
+    min-width: 0;
+  }
+
+  img.head {
+    margin-top: 50px;
+  }
+
+  h1.name,
+  h2.ocupation {
+    display: none;
+  }
+
+  body > div:nth-child(4) > div.right.work,
+  body > div:nth-child(6) > div.right.skills,
+  body > div:nth-child(4) > div.right.volunteers,
+  body > div:nth-child(2) > div.right.education {
+    text-align: center;
+  }
+
+body > div:nth-child(2) > div.left > h2,
+body > div.total > div.left > h2,
+body > div:nth-child(2) > div.left > h2, 
+body > div:nth-child(2) > div.right.education,
+body > div.total > div.right.publications,
+body > div:nth-child(2) > div.right.grants,
+body > div:nth-child(3) > div.right.grants-exp,
+body > div:nth-child(3) > div.right.awards,
+body > div:nth-child(4) > div.right.volunteers,
+body > div:nth-child(4) > div.right.work,
+body > div:nth-child(5) > div.right.skills {
+  padding-top: 0;
+}
+
+
+  #mobile-name-title {
+    display: block;
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 50px;
+  }
+
+  body,
+  a#navicon,
+  nav.horizontal {
+    display: block;
+    flex-flow: row nowrap;
+  }
+
+  body aside#side {
+    margin-top: 0;
+    width: 100%;
+  }
+
+  body section#main {
+    margin-top: 0;
+    width: 100%;
+  }
+
+  nav.horizontal ul li a {
+    font-size: 1em;
+    text-align: left;
+  }
+
+  nav.horizontal ul {
+    display: none;
+  }
+
+  article {
+    width: 100%;
+    margin: 0px;
+  }
+
+  div.left {
+    padding: 5% 0 0 5%;
+  }
+
+  div.left {
+    padding: 5% 0 0 5%;
+  }
+
+  div.left > h2 {
+    text-align: center;
+    margin: 0;
+  }
+
+  section#main,
+  div.right {
+    padding: 5% 10%;
+    width: 100%;
+    margin-top: -50px;
+  }
+
+  section#main div {
+    padding: 0;
+    font-size: 1em;
+  }
+
+  aside#side,
+  section#main,
+  div.total,
+  footer {
+    flex-flow: column nowrap;
+  }
+
+  h3 {
+    margin-top: 10px;
+  }
+
+  div.grants p,
+  div.awards p,
+  div.skills p {
+    margin-top: 10px;
+  }
+
+  div.publications {
+    margin-top: 20px;
+  }
+
+  #footer-link > div.right-footer > div {
+    margin: 0;
+    text-align: left; /* need to modify */
+  }
+
+  hr {
+    width: 200px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 0; /* need to modify */
+  }
+
+  #footer-link > div.right-footer {
+    padding: 5% 0 0 10%;
+  }
+}
